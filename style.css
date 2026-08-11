@@ -1,6 +1,5 @@
-/* 1. 全体の基本設定（背景色やフォント）*/
 body {
-  background-color: #dcebfe; /* 画像にあった優しい薄い青色 */
+  background-color: #dcebfe; 
   font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   padding: 40px;
@@ -12,12 +11,11 @@ body {
   margin-bottom: 24px;
 }
 
-/* 2. コンタクトカードの配置とグループ化*/
 .contact-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 500px; /* カード全体の横幅の上限 */
+  max-width: 500px; 
 }
 
 .email-group {
@@ -25,30 +23,26 @@ body {
   flex-direction: column;
 }
 
-/* メールカード下の補足テキスト */
 .sub-text {
   margin: 6px 0 0 16px;
   font-size: 12px;
   color: #555555;
 }
 
-/* 3. 左右が丸いカードのデザイン＆ホバーアニメーション*/
 .contact-card {
   display: flex;
   align-items: center;
   gap: 16px;
   background-color: #ffffff;
   padding: 12px 24px;
-  border-radius: 50px; /* 左右両端を丸くカプセル型にする */
+  border-radius: 50px; 
   text-decoration: none;
   color: #333333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* うっすら影をつける */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
 
-  /* ★動きを滑らかにする設定（0.2秒かけて変化） */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* ★カーソルを乗せたとき（ホバー時）の演出 */
 .contact-card:hover {
   /* ほんの少し浮き上がり（-2px）、ほんの少し拡大（1.03倍） */
   transform: translateY(-2px) scale(1.03);
@@ -64,7 +58,6 @@ body {
   word-break: break-all;
 }
 
-/* 4. アイコンの装飾*/
 .icon-box {
   font-size: 24px;
   display: flex;
@@ -74,26 +67,23 @@ body {
   height: 36px;
 }
 
-/* メールアイコン（落ち着いた鮮やかな青紫） */
 .email-icon {
   color: #4f46e5;
 }
 
-/* Instagram公式ロゴ（公式グラデーション風） */
 .instagram-icon {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* 5. 右下固定表示のDiscordボタン */
 .discord-btn {
-  position: fixed; /* 画面に対して位置を固定（スクロールしても追従） */
-  bottom: 24px;    /* 下から24px */
-  right: 24px;     /* 右から24px */
+  position: fixed; 
+  bottom: 24px;    
+  right: 24px;     
   width: 56px;
   height: 56px;
-  background-color: #5865F2; /* Discord公式カラー */
+  background-color: #5865F2; 
   color: #ffffff;
   border-radius: 50%;
   display: flex;
@@ -106,15 +96,13 @@ body {
   z-index: 999;
 }
 
-/* Discordアイコンにカーソルを乗せた時の動き */
 .discord-btn:hover {
-  transform: scale(1.1); /* 1.1倍に拡大 */
+  transform: scale(1.1); 
 }
 
-/*  6. アドレスコピー完了通知（トースト通知）*/
 .toast {
   position: fixed;
-  bottom: -60px; /* 初期状態は画面の下外に隠す */
+  bottom: -60px; 
   left: 50%;
   transform: translateX(-50%);
   background-color: #333333;
@@ -123,11 +111,10 @@ body {
   border-radius: 30px;
   font-size: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: bottom 0.3s ease; /* 浮き上がるアニメーション */
+  transition: bottom 0.3s ease; 
   z-index: 1000;
 }
 
-/* JSでこのクラスがつくと画面下から出現 */
 .toast.show {
   bottom: 40px;
 }
