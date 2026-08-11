@@ -1,11 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WCS-Homepage</title>
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="contact-container">
+      <h2>お問い合わせ</h2>
+
+      <div class="contact-list">
+        <div class="email-group">
+          <div class="contact-card" id="email-card">
+            <div class="icon-box email-icon">
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <span class="text" id="email-text"
+              >whitecoatsociety.japan@gmail.com</span
+            >
+          </div>
+          <p class="sub-text">※クリックするとアドレスがコピーされます</p>
+        </div>
+
+        <a
+          href="https://www.instagram.com/wcs_japan/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card"
+        >
+          <div class="icon-box instagram-icon">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <span class="text">whitecoatsociety.japan</span>
+        </a>
+      </div>
+    </div>
+
+    <a
+      href="https://discord.gg/mYD9qf7tH"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="discord-btn"
+      aria-label="Discord"
+    >
+      <i class="fa-brands fa-discord"></i>
+    </a>
+
+    <div id="toast" class="toast">アドレスをコピーしました！</div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
