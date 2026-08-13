@@ -91,6 +91,12 @@ body {
   opacity: 0.75;
 }
 
+.gmail-logo {
+  width: 58px;
+  height: auto;
+  display: block;
+}
+
 #email-card {
   cursor: pointer;
 }
