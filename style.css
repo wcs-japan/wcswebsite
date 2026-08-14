@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+}
+
+.navbar {
+    background-color: #cfe3fa;
+    height: 110px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 75px;
+    padding-right: 45px;
+}
+
+.navbar a {
+    color: #6198e6;
+    text-decoration: none;
+    font-size: 38px;
+}
+
+.discord {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.discord img {
+    width: 40px;
+    height: auto;
+    border-radius: 100px;
+}
+
+.banner {
+    height: 395px;
+    background-color: #1957a0;
+}
+
+.news {
+    height: 400px;
+    background-color: #cfe3fa;
+}
+
+.news h1 {
+    text-align: center;
+    color: cornflowerblue;
+    font-size: 50px;
+}
+
+.news ul{
+    width: 520px;
+    margin: 0 auto;
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.news a{
+    color: white;
+    text-decoration: none;
+}
