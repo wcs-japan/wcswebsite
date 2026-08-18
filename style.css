@@ -5,65 +5,86 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     background-color: whitesmoke;
+    color: #0f1f2d;
 }
 
 .navbar {
     background-color: #cfe3fa;
     height: 110px;
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
-    gap: 75px;
+    gap: 36px;
     padding-right: 45px;
 }
 
 .navbar a {
     color: #6198e6;
     text-decoration: none;
-    font-size: 38px;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
 .discord {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    bottom: 24px;
+    right: 24px;
+    width: 58px;
+    height: 58px;
+    background-color: #5865f2;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    z-index: 999;
 }
 
-.discord img {
-    width: 40px;
-    height: auto;
-    border-radius: 100px;
+.discord i {
+    font-size: 28px;
+    line-height: 1;
 }
 
 .banner {
-    height: 395px;
+    height: 290px;
     background-color: #1957a0;
 }
 
 .news {
-    height: 400px;
     background-color: #cfe3fa;
+    min-height: 360px;
+    padding: 32px 20px 50px;
 }
 
 .news h1 {
     text-align: center;
-    color: cornflowerblue;
-    font-size: 50px;
+    color: #3b7ed4;
+    font-size: 40px;
+    margin-bottom: 18px;
+    font-weight: 700;
 }
 
-.news ul{
-    width: 520px;
+.news ul {
+    width: min(90%, 700px);
     margin: 0 auto;
+    list-style: none;
     color: white;
-    font-size: 38px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.7;
 }
 
-.news a{
+.news li {
+    margin-bottom: 12px;
+}
+
+.news a {
     color: white;
     text-decoration: none;
 }
