@@ -107,6 +107,10 @@ body {
   cursor: pointer;
 }
 
+.twitter-icon {
+  font-size: 55px;
+  color: #000;
+}
 .icon-box {
   width: 70px;
   height: 70px;
