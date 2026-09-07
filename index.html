@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WCS-Homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+  <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="WCS Logo" />
+  </a>
+
+ <nav class="nav">
+        <a href="index.html">ホーム</a>
+        <a href="news.html">ニュース</a>
+        <a href="about.html">WCSについて</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+</header>
+    <section class="banner">
+      <img src="images/banner.png" alt="Banner" />
+    </section>
+
+    <section class="news">
+  <h1>News</h1>
+
+  <div id="home-news-list"></div>
+
+  <a href="news.html" class="news-more-btn">
+    もっと見る
+    <i class="fa-solid fa-arrow-right"></i>
+  </a>
+</section>
+
+<script src="news-data.js"></script>
+
+<script>
+  const homeNewsList = document.getElementById("home-news-list");
+
+  newsData.slice(0, 4).forEach((news) => {
+    homeNewsList.innerHTML += `
+      <a href="${news.link}" class="news-item">
+        <span class="news-date">${news.date}</span>
+        <span class="news-title">${news.title}</span>
+      </a>
+    `;
+  });
+</script>
+
+   <a
+      href="https://discord.gg/UCfJjAPaS"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="discord-btn"
+      aria-label="Discord"
+    >
+      <i class="fa-brands fa-discord"></i>
+    </a>
+  </body>
+</html>
