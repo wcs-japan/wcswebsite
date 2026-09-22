@@ -19,11 +19,17 @@
   </a>
 
  <nav class="nav">
-        <a href="index.html">ホーム</a>
-        <a href="news.html">ニュース</a>
-        <a href="about.html">WCSについて</a>
-        <a href="contact.html">お問い合わせ</a>
-      </nav>
+  <a href="index.html" data-i18n="nav.home">ホーム</a>
+  <a href="news.html" data-i18n="nav.news">ニュース</a>
+  <a href="about.html" data-i18n="nav.about">WCSについて</a>
+  <a href="contact.html" data-i18n="nav.contact">お問い合わせ</a>
+</nav>
+<div class="language-switch">
+  <button type="button" class="lang-btn" id="language-toggle">
+    日本語 / EN
+  </button>
+</div>
+</div>
 </header>
     <section class="banner">
       <img src="images/banner.png" alt="Banner" />
@@ -47,7 +53,7 @@
 
   newsData.slice(0, 4).forEach((news) => {
     homeNewsList.innerHTML += `
-      <a href="${news.link}" class="news-item">
+      <a href="news-detail.html?id=${news.id}" class="news-item">
         <span class="news-date">${news.date}</span>
         <span class="news-title">${news.title}</span>
       </a>
@@ -64,5 +70,8 @@
     >
       <i class="fa-brands fa-discord"></i>
     </a>
+    
+    <script src="language.js"></script>
+
   </body>
 </html>

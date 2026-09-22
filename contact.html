@@ -11,6 +11,14 @@
 />
 
     <link rel="stylesheet" href="contact.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap"
+  rel="stylesheet"
+>
+
   </head>
 
   <body>
@@ -19,18 +27,26 @@
     <img src="images/logo.png" alt="WCS Logo" />
   </a>
 
- <nav class="nav">
-        <a href="index.html">ホーム</a>
-        <a href="news.html">ニュース</a>
-        <a href="about.html">WCSについて</a>
-        <a href="contact.html">お問い合わせ</a>
-      </nav>
+<nav class="nav">
+  <a href="index.html" data-i18n="nav.home">ホーム</a>
+  <a href="news.html" data-i18n="nav.news">ニュース</a>
+  <a href="about.html" data-i18n="nav.about">WCSについて</a>
+  <a href="contact.html" data-i18n="nav.contact">お問い合わせ</a>
+</nav>
+
+ <div class="language-switch">
+    <button type="button" class="lang-btn" id="language-toggle">
+      日本語 / EN
+    </button>
+  </div>
+
+
 </header>
 
     <section class="contact-hero">
-      <h1>- お問い合わせ -</h1>
-      <p>Contact info</p>
-    </section>
+  <h1 data-i18n="contact.heroTitle">- お問い合わせ -</h1>
+  <p data-i18n="contact.heroSubtitle">Contact info</p>
+</section>
 
     <main class="contact-container">
       <div class="contact-list">
@@ -73,11 +89,11 @@
 
 
       <section class="form-section">
-        <h2>お問い合わせフォーム↓</h2>
+       <h2 data-i18n="contact.formTitle">お問い合わせフォーム</h2>
 
         <form id="contact-form">
           <div class="form-group">
-            <label for="name">お名前</label>
+<label for="name" data-i18n="contact.name">お名前</label>
             <input
               type="text"
               id="name"
@@ -88,8 +104,7 @@
           </div>
 
           <div class="form-group">
-            <label for="email">メールアドレス</label>
-            <input
+<label for="email" data-i18n="contact.email">メールアドレス</label>            <input
               type="email"
               id="email"
               name="email"
@@ -99,7 +114,7 @@
           </div>
 
           <div class="form-group">
-            <label for="subject">件名</label>
+<label for="subject" data-i18n="contact.subject">件名</label>
             <input
               type="text"
               id="subject"
@@ -110,8 +125,7 @@
           </div>
 
           <div class="form-group">
-            <label for="message">お問い合わせ内容</label>
-            <textarea
+<label for="message" data-i18n="contact.message">お問い合わせ内容</label>            <textarea
               id="message"
               name="message"
               rows="7"
@@ -120,11 +134,10 @@
             ></textarea>
           </div>
 
-          <button type="submit" class="submit-btn" id="submit-btn">
-            送信
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
-
+        <button type="submit" class="submit-btn" id="submit-btn">
+  <span data-i18n="contact.submit">送信</span>
+  <i class="fa-solid fa-paper-plane"></i>
+</button>
           <p id="form-error" class="form-error"></p>
         </form>
       </section>
@@ -162,5 +175,7 @@
     </div>
 
     <script src="contact.js"></script>
+    <script src="language.js"></script>
+
   </body>
 </html>

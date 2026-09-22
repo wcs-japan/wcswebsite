@@ -11,6 +11,14 @@
     />
 
     <link rel="stylesheet" href="about.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap"
+  rel="stylesheet"
+>
+
   </head>
 
   <body>
@@ -18,39 +26,46 @@
       <a href="index.html" class="logo">
         <img src="images/logo.png" alt="WCS Logo" />
       </a>
+      
+<nav class="nav">
+  <a href="index.html" data-i18n="nav.home">ホーム</a>
+  <a href="news.html" data-i18n="nav.news">ニュース</a>
+  <a href="about.html" data-i18n="nav.about">WCSについて</a>
+  <a href="contact.html" data-i18n="nav.contact">お問い合わせ</a>
+</nav>
 
-     <nav class="nav">
-        <a href="index.html">ホーム</a>
-        <a href="news.html">ニュース</a>
-        <a href="about.html">WCSについて</a>
-        <a href="contact.html">お問い合わせ</a>
-      </nav>
+ <div class="language-switch">
+    <button type="button" class="lang-btn" id="language-toggle">
+      日本語 / EN
+    </button>
+  </div>
+
     </header>
 
     <section class="contact-hero">
-      <h1>- WCSについて -</h1>
-      <p>About Us</p>
+      <h1><strong data-i18n="about.heroTitle">- WCSについて -</strong></h1>
+      <p data-i18n="about.heroSubtitle">About Us</p>
     </section>
 
     <main>
       <section class="about-intro">
         <div class="section-container">
-          <h2>White Coat Societyとは</h2>
+          <h2 data-i18n="about.whatTitle">White Coat Societyとは</h2>
 
-          <p>
+          <p data-i18n="about.intro1">
             White Coat Society（WCS）は、医療に関心を持つ中高生が、
             実際の医療現場や研究に触れ、実践的に学べる機会を増やすことを目的とした学生団体です。
           </p>
 
-          <p>
+          <p data-i18n="about.intro2">
             現在、中高生が医療について学ぶ機会は、学校での授業やインターネットなどに限られることも多く、
             実際に医療現場を見たり、医療に携わる方々から直接お話を伺ったりする機会はまだ十分ではありません。
           </p>
 
           <p>
-            私たちはこの現状に注目し、
-            <strong>実際に見て、聞いて、感じて、学ぶ場</strong>
-            を中高生に届けるため、様々な活動をしています。
+            <span data-i18n="about.intro3Before">私たちはこの現状に注目し、</span>
+            <strong data-i18n="about.intro3Strong">実際に見て、聞いて、感じて、学ぶ場</strong>
+            <span data-i18n="about.intro3After">を中高生に届けるため、様々な活動をしています。</span>
           </p>
         </div>
       </section>
@@ -58,8 +73,8 @@
       <section class="activities-section">
         <div class="section-container">
           <div class="section-title">
-            <h2>主な活動内容</h2>
-            <p>Activities</p>
+            <h2 data-i18n="about.activitiesTitle">主な活動内容</h2>
+            <p data-i18n="about.activitiesSubtitle">Activities</p>
           </div>
 
           <div class="activity-grid">
@@ -68,9 +83,9 @@
                 <i class="fa-solid fa-hospital"></i>
               </div>
 
-              <h3>医療現場での体験</h3>
+              <h3 data-i18n="about.activity1Title">医療現場での体験</h3>
 
-              <p>
+              <p data-i18n="about.activity1Text">
                 病院やクリニック、介護施設と連携し、
                 ボランティアや職業体験に参加します。
               </p>
@@ -81,9 +96,9 @@
                 <i class="fa-solid fa-user-doctor"></i>
               </div>
 
-              <h3>現場で働く医師の講演会</h3>
+              <h3 data-i18n="about.activity2Title">現場で働く医師の講演会</h3>
 
-              <p>
+              <p data-i18n="about.activity2Text">
                 実際に医療現場で働く医師の方々から、
                 医療の仕事や現場での経験について直接お話を伺います。
               </p>
@@ -94,9 +109,9 @@
                 <i class="fa-solid fa-user-group"></i>
               </div>
 
-              <h3>医学生・研修医との交流会</h3>
+              <h3 data-i18n="about.activity3Title">医学生・研修医との交流会</h3>
 
-              <p>
+              <p data-i18n="about.activity3Text">
                 医学生や研修医などの先輩方に、
                 受験について相談したり、学生生活や進路についての体験談を聞いたりすることができます。
               </p>
@@ -107,9 +122,9 @@
                 <i class="fa-solid fa-hand-holding-heart"></i>
               </div>
 
-              <h3>患者さんとの交流会</h3>
+              <h3 data-i18n="about.activity4Title">患者さんとの交流会</h3>
 
-              <p>
+              <p data-i18n="about.activity4Text">
                 医療者側からの視点だけではなく、
                 医療を受ける側がどのようなことを感じ、考えているのかを知ることで、
                 普段とは異なる視点から医療について学びます。
@@ -122,11 +137,11 @@
       <section class="management-section">
         <div class="section-container">
           <div class="section-title">
-            <h2>WCSの運営について</h2>
-            <p>Our Team</p>
+            <h2 data-i18n="about.teamTitle">WCSの運営について</h2>
+            <p data-i18n="about.teamSubtitle">Our Team</p>
           </div>
 
-          <p class="management-intro">
+          <p class="management-intro" data-i18n="about.teamIntro">
             WCSの運営には、主に三つの部門が携わっています。
           </p>
 
@@ -138,9 +153,9 @@
                 <i class="fa-solid fa-clipboard-list"></i>
               </div>
 
-              <h3>メイン部門</h3>
+              <h3 data-i18n="about.department1Title">メイン部門</h3>
 
-              <p>
+              <p data-i18n="about.department1Text">
                 病院や医師の方々に連絡を取り、
                 WCSで実施する企画の立案から運営までを担当します。
               </p>
@@ -153,9 +168,9 @@
                 <i class="fa-solid fa-laptop-code"></i>
               </div>
 
-              <h3>ウェブサイト部門</h3>
+              <h3 data-i18n="about.department2Title">ウェブサイト部門</h3>
 
-              <p>
+              <p data-i18n="about.department2Text">
                 当ウェブサイトの更新や管理を行い、
                 WCSの活動や情報を分かりやすく発信します。
               </p>
@@ -168,9 +183,9 @@
                 <i class="fa-solid fa-mobile-screen-button"></i>
               </div>
 
-              <h3>SNS部門</h3>
+              <h3 data-i18n="about.department3Title">SNS部門</h3>
 
-              <p>
+              <p data-i18n="about.department3Text">
                 InstagramやXなどのSNSを運用し、
                 WCSの活動やイベントについてより多くの方々に発信します。
               </p>
@@ -189,5 +204,9 @@
     >
       <i class="fa-brands fa-discord"></i>
     </a>
+
+    <script src="language.js"></script>
+
   </body>
+
 </html>

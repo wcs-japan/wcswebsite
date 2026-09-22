@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Sawarabi Gothic", sans-serif;
+
+}
+strong {
+  font-weight: 700;
 }
 
 html {
@@ -15,9 +20,8 @@ body {
   line-height: 1.8;
 }
 
-/* HEADER */
-
 .header {
+  position: relative;
   height: 105px;
   background-color: #dcebfe;
   display: flex;
@@ -35,7 +39,8 @@ body {
 .nav {
   display: flex;
   align-items: center;
-  gap: 70px;
+  gap: 55px;
+  margin-right: 125px;
 }
 
 .nav a {
@@ -43,6 +48,7 @@ body {
   text-decoration: none;
   font-size: 27px;
   font-weight: 400;
+  white-space: nowrap;
   transition: opacity 0.2s ease;
 }
 
@@ -50,7 +56,33 @@ body {
   opacity: 0.55;
 }
 
-/* HERO */
+.language-switch {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lang-btn {
+  border: 1.5px solid #1756a3;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #1756a3;
+  padding: 7px 12px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.lang-btn:hover {
+  background-color: #1756a3;
+  color: #fff;
+}
 
 .contact-hero {
   height: 160px;
@@ -70,8 +102,6 @@ body {
 .contact-hero p {
   font-size: 22px;
 }
-
-/* GENERAL */
 
 .section-container {
   width: min(1100px, 90%);
@@ -93,8 +123,6 @@ body {
   color: #6b8db7;
   font-size: 18px;
 }
-
-/* ABOUT INTRO */
 
 .about-intro {
   padding: 80px 0 90px;
@@ -128,8 +156,6 @@ body {
 .about-intro strong {
   color: #1756a3;
 }
-
-/* ACTIVITIES */
 
 .activities-section {
   background-color: #ffffff;
@@ -179,8 +205,6 @@ body {
   font-size: 16px;
   line-height: 1.9;
 }
-
-/* MANAGEMENT */
 
 .management-section {
   padding: 90px 0 110px;
@@ -242,8 +266,6 @@ body {
   line-height: 1.9;
 }
 
-/* DISCORD */
-
 .discord-btn {
   position: fixed;
   bottom: 30px;
@@ -275,24 +297,32 @@ body {
   padding: 10px;
 }
 
-/* MOBILE */
-
 @media (max-width: 768px) {
   .header {
     height: 80px;
-    padding: 0 20px;
+    padding: 0 12px;
   }
 
   .logo img {
-    height: 65px;
+    height: 55px;
   }
 
   .nav {
-    gap: 20px;
+    gap: 12px;
+    margin-right: 72px;
   }
 
   .nav a {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  .language-switch {
+    right: 8px;
+  }
+
+  .lang-btn {
+    font-size: 10px;
+    padding: 5px 7px;
   }
 
   .contact-hero {
@@ -379,19 +409,29 @@ body {
 
 @media (max-width: 520px) {
   .header {
-    padding: 0 12px;
+    padding: 0 8px;
   }
 
   .logo img {
-    height: 55px;
+    height: 48px;
   }
 
   .nav {
-    gap: 12px;
+    gap: 8px;
+    margin-right: 60px;
   }
 
   .nav a {
-    font-size: 12px;
+    font-size: 10px;
+  }
+
+  .language-switch {
+    right: 5px;
+  }
+
+  .lang-btn {
+    font-size: 9px;
+    padding: 4px 6px;
   }
 
   .contact-hero h1 {

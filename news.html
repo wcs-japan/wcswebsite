@@ -12,7 +12,14 @@
     />
 
     <link rel="stylesheet" href="news.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap"
+  rel="stylesheet"
+>
   </head>
+
 
   <body>
     <header class="header">
@@ -21,11 +28,19 @@
       </a>
 
       <nav class="nav">
-        <a href="index.html">ホーム</a>
-        <a href="news.html">ニュース</a>
-        <a href="about.html">WCSについて</a>
-        <a href="contact.html">お問い合わせ</a>
-      </nav>
+  <a href="index.html" data-i18n="nav.home">ホーム</a>
+  <a href="news.html" data-i18n="nav.news">ニュース</a>
+  <a href="about.html" data-i18n="nav.about">WCSについて</a>
+  <a href="contact.html" data-i18n="nav.contact">お問い合わせ</a>
+</nav>
+
+ <div class="language-switch">
+    <button type="button" class="lang-btn" id="language-toggle">
+      日本語 / EN
+    </button>
+  </div>
+
+
     </header>
 
     <section class="news-hero">
@@ -54,5 +69,9 @@
 
     <script src="news-data.js"></script>
     <script src="news.js"></script>
+
+    <script src="language.js"></script>
+
   </body>
+  
 </html>
