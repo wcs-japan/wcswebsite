@@ -208,6 +208,37 @@ body {
 }
 
 
+.news-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 35px auto 20px;
+  border-radius: 15px;
+}
+
+.instagram-post-link {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 auto;
+  color: #1756a3;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.instagram-post-link:hover {
+  opacity: 0.6;
+}
+
+.instagram-post-link i {
+  font-size: 21px;
+}
+
+
+
 
 @media (max-width: 768px) {
 
