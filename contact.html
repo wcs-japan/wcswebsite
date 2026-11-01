@@ -27,20 +27,30 @@
     <img src="images/logo.png" alt="WCS Logo" />
   </a>
 
-<nav class="nav">
-  <a href="index.html" data-i18n="nav.home">ホーム</a>
-  <a href="news.html" data-i18n="nav.news">ニュース</a>
-  <a href="about.html" data-i18n="nav.about">WCSについて</a>
-  <a href="contact.html" data-i18n="nav.contact">お問い合わせ</a>
-</nav>
+  <nav class="nav" id="main-nav" aria-label="Main navigation">
+    <a href="index.html" data-i18n="nav.home">ホーム</a>
+    <a href="news.html" data-i18n="nav.news">ニュース</a>
+    <a href="about.html" data-i18n="nav.about">WCSについて</a>
+    <a href="contact.html" data-i18n="nav.contact">お問い合わせ</a>
+  </nav>
 
- <div class="language-switch">
+  <div class="language-switch">
     <button type="button" class="lang-btn" id="language-toggle">
       日本語 / EN
     </button>
   </div>
 
-
+  <button
+    type="button"
+    class="menu-toggle"
+    aria-label="Open menu"
+    aria-controls="main-nav"
+    aria-expanded="false"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
 
     <section class="contact-hero">
@@ -176,6 +186,50 @@
 
     <script src="contact.js"></script>
     <script src="language.js"></script>
+
+    <script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.getElementById("main-nav");
+
+  function setMenuOpen(open) {
+    mainNav.classList.toggle("is-open", open);
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute(
+      "aria-label",
+      open ? "Close menu" : "Open menu"
+    );
+  }
+
+  menuToggle.addEventListener("click", () => {
+    setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  mainNav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".header")) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      menuToggle.getAttribute("aria-expanded") === "true"
+    ) {
+      setMenuOpen(false);
+      menuToggle.focus();
+    }
+  });
+
+  window.matchMedia("(max-width: 768px)").addEventListener("change", () => {
+    setMenuOpen(false);
+  });
+</script>
 
   </body>
 </html>
