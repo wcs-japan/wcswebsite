@@ -1,8 +1,58 @@
 const newsData = [
- {
+  {
+    id: "senpai",
+    date: "2026.11.04",
+    title: "先輩交流会の参加者を募集",
+    recruiting: true,
+eventTitle: "【交流会】看護学生と生理学部生の先輩とオンライン交流イベント",
+applicationDeadline: "2026年11月7日 23:59",
+    content: `
+     <p>
+  11月8日（日）11:00-12:00に聖路加看護大学に通っている方と、海外大で生理学を学んでいる先輩との講演会・交流会をオンラインで開催します！それぞれバックグラウンドの違う先輩方に受験や大学生活、どのように将来のことを考えているのか、直接お話を聞ける機会です。
+</p>
+
+<p>
+  <strong>日時</strong><br>
+  11月8日（日）11:00-12:00 (Google Meet)
+</p>
+
+<p>
+  <strong>対象</strong><br>
+  中高生（定員なし）
+</p>
+
+<p>
+  <strong>応募締め切り</strong><br>
+  11月7日（土）23:59
+</p>
+
+<p>
+  <strong>当日の流れ</strong><br>
+  生理学専攻の先輩の講演会　（２０分程度）<br>
+  看護学生の先輩の講演会（ ２０分程度）<br>
+  質問タイム　（２０分程度）
+</p>
+
+<p>興味のある方は、下記フォームよりお申し込みください！</p>
+
+<h5>
+  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSfke6Wmn1uS1FZ1zZsUxDaI8wklv8LGn3IYoq_nfFVvYMtaBg/viewform?usp=header"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    お申し込みはこちら
+  </a>
+</h5> 
+`
+  },
+  {
     id: "kameda",
-    date: "2026.11.1",
+    date: "2026.11.01",
     title: "1泊2日の医療体験イベント参加者募集中",
+    recruiting: true,
+eventTitle: "【宿泊】亀田総合病院で一泊二日の医療体験",
+applicationDeadline: "2026年11月7日 23:59",
     content: `
       <p>
         この度、医療法人鉄蕉会 亀田総合病院様のご厚意により、1泊2日の医療体験イベントを開催することとなりました。
@@ -96,6 +146,9 @@ const newsData = [
   id: "hikifune",
   date: "2026.10.29",
   title: "東京曳舟病院での病院見学・医師交流会参加者募集中",
+  recruiting: false,
+eventTitle: "【単発】東京曳舟病院で病院見学・医師交流会",
+applicationDeadline: "2026年11月4日",
   content: `
 <p>11月7日（土）に病院見学・医師交流会を開催します！<br>
 普段はなかなか入ることのできない病院の中を見学したり、実際に働いている医師の方に直接質問したりできる機会です。</p>

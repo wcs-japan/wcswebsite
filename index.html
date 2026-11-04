@@ -59,6 +59,11 @@
   </a>
 </section>
 
+<section class="events">
+  <h2>現在募集中のイベント</h2>
+  <div id="recruiting-events" class="event-list"></div>
+</section>
+
 <script src="news-data.js"></script>
 
 <script>
@@ -128,6 +133,29 @@
   window.matchMedia("(max-width: 768px)").addEventListener("change", () => {
     setMenuOpen(false);
   });
+</script>
+
+<script>
+  const eventList = document.getElementById("recruiting-events");
+
+  newsData
+    .filter((news) => news.recruiting === true)
+    .forEach((news) => {
+      const card = document.createElement("a");
+      card.className = "event-card";
+      card.href = `news-detail.html?id=${encodeURIComponent(news.id)}`;
+
+      const title = document.createElement("h3");
+      title.className = "event-title";
+      title.textContent = news.eventTitle || news.title;
+
+      const deadline = document.createElement("p");
+      deadline.className = "event-deadline";
+      deadline.textContent = `応募締め切り：${news.applicationDeadline}`;
+
+      card.append(title, deadline);
+      eventList.appendChild(card);
+    });
 </script>
 
   </body>
