@@ -3,7 +3,7 @@ const newsData = [
     id: "senpai",
     date: "2026.11.04",
     title: "先輩交流会の参加者を募集",
-    recruiting: true,
+    recruiting: false,
 eventTitle: "【交流会】看護学生と生理学部生の先輩とオンライン交流イベント",
 applicationDeadline: "2026年11月7日 23:59",
     content: `
@@ -50,7 +50,7 @@ applicationDeadline: "2026年11月7日 23:59",
     id: "kameda",
     date: "2026.11.01",
     title: "1泊2日の医療体験イベント参加者募集中",
-    recruiting: true,
+    recruiting: false,
 eventTitle: "【宿泊】亀田総合病院で一泊二日の医療体験",
 applicationDeadline: "2026年11月7日 23:59",
     content: `
